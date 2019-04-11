@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background: rgb(215,48,157);
+    background: linear-gradient(133deg, rgba(215,48,157,1) 0%, rgba(237,56,56,1) 100%);
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6, p, input, label, span, ul, ol, button {
+    font-family: 'Lato', sans-serif;
+    color: #474747;
+}

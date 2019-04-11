@@ -1,0 +1,107 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 20px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.titles > h1 {
+    margin-bottom: 0px;
+}
+
+input {
+    height: 35px;
+    border-radius: 7px;
+    border: 1px solid #EAEAEA;
+    width: 100%;
+    color: #474747;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+.holder {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.complete-btn {
+    display: inline-block;
+    padding: 5px 5px;
+    font-size: 12px;
+    border-radius: 6px;
+    border: 3px solid rgb(215,48,157);
+    color: rgb(215,48,157);
+    margin: 0px 5px;
+}
+
+ol {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.task-text {
+    margin: 0px 5px;
+    display: inline-block;
+    padding: 5px 0px;
+}
+
+i {
+    float: right;
+    margin: 5px 0px;
+}
+
+.add {
+    background: rgb(215,48,157);
+    display: block;
+    width: 102%;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    margin: 20px auto;
+}
+
+.strikethru {
+    text-decoration: line-through;
+}
+
+@media only screen and (min-width: 480px) {
+    ol {
+        padding-left: 50px;
+    }
+
+    .task-text {
+        margin: 0px 10px;
+        padding: 10px 0px;
+    }
+    
+    .complete-btn {
+        padding: 10px 10px;
+        font-size: 16px;
+        margin: 0px 10px;
+    }
+
+    i {
+        margin: 14px 0px;
+    }
+}

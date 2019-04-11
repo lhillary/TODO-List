@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="form">
+    <div class="titles holder">
+        <h1>TODO List</h1>
+        <p>A place to store the things you have to do!</p>
+    </div>
+    <div class="holder">
+      <input type="text" placeholder="Filter your to-dos"/>
+    </div>
+    <div class="holder">
+      <ol>
+        <li *ngFor="let task of tasks">
+          <button class="complete-btn" *ngIf="task.completed === false">Complete</button>
+          <span class="task-text" [ngClass]="{'strikethru' : task.completed === true}">{{ task.task }}</span>
+          <i class="fas fa-times"></i>
+        </li>
+      </ol>
+    </div>
+    <div class="holder">
+        <input type="text" placeholder="Add your to do" />
+        <button class="add">Add</button>
+    </div>
+  </div>
+</div> 
