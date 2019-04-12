@@ -31,6 +31,11 @@ input:focus {
     outline: none;
 }
 
+.edit {
+    display: inline-block;
+    width: 50%;
+}
+
 button:focus {
     outline: none;
 }
@@ -62,6 +67,7 @@ li {
     margin: 0px 5px;
     display: inline-block;
     padding: 5px 0px;
+    max-width: 250px;
 }
 
 i {
@@ -85,6 +91,10 @@ i {
     text-decoration: line-through;
 }
 
+.hide {
+    display: none;
+}
+
 @media only screen and (min-width: 480px) {
     ol {
         padding-left: 50px;
@@ -93,6 +103,7 @@ i {
     .task-text {
         margin: 0px 10px;
         padding: 10px 0px;
+        max-width: 450px;
     }
     
     .complete-btn {
@@ -103,5 +114,9 @@ i {
 
     i {
         margin: 14px 0px;
+    }
+
+    .edit {
+        width: 60%;
     }
 }

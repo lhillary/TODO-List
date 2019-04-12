@@ -5,20 +5,23 @@
         <p>A place to store the things you have to do!</p>
     </div>
     <div class="holder">
-      <input type="text" placeholder="Filter your to-dos"/>
+      <input type="text" placeholder="Filter your to-dos" (change)="filterList($event)" [value]="filterKey"/>
     </div>
     <div class="holder">
       <ol>
-        <li *ngFor="let task of tasks">
-          <button class="complete-btn" *ngIf="task.completed === false">Complete</button>
-          <span class="task-text" [ngClass]="{'strikethru' : task.completed === true}">{{ task.task }}</span>
-          <i class="fas fa-times"></i>
+        <li *ngFor="let task of tasks; let i = index;" [ngClass]="{'hide' : task.hide === true}">
+          <button class="complete-btn" *ngIf="task.completed === false" (click)="completeTask(i)">Complete</button>
+          <span class="task-text" [ngClass]="{'strikethru' : task.completed === true}" *ngIf="task.editMode === false" (click)="editTask(i)">{{ task.task }}</span>
+          <span class="edit" *ngIf="task.editMode === true">
+            <input [(ngModel)]="task.task" (change)="save(i)" (blur)="save(i)" autoFocus >
+          </span>
+          <i class="fas fa-times" (click)="removeTask(i)" ></i>
         </li>
       </ol>
     </div>
     <div class="holder">
-        <input type="text" placeholder="Add your to do" />
-        <button class="add">Add</button>
+        <input type="text" placeholder="Add your to do" (input)="getTask($event)" [value]="taskInput" />
+        <button class="add" (click)="addTask()">Add</button>
     </div>
   </div>
 </div> 
